@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Todo List</title>
+  <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📝 My Todo List</h1>
+    <p class="sub-title">My first JavaScript project</p>
+    <div class="add-box">
+      <input type="text" id="taskInput" placeholder="Write a new task here..." maxlength="60" aria-label="New task">
+      <select id="priorityInput" aria-label="Priority">
+        <option value="normal">Normal</option>
+        <option value="important">Important</option>
+        <option value="urgent">Urgent</option>
+      </select>
+      <button id="addBtn" type="button">Add</button>
+    </div>
+    <p id="errorMsg" class="error-msg" role="alert"></p>
+    <div class="filter-box">
+      <button class="filterBtn active" data-filter="all">All</button>
+      <button class="filterBtn" data-filter="pending">Pending</button>
+      <button class="filterBtn" data-filter="completed">Completed</button>
+    </div>
+    <ul id="taskList"></ul>
+    <div class="footer-box">
+      <span id="taskCounter">Tasks: 0</span>
+      <button id="clearDoneBtn" type="button">Clear completed tasks</button>
+    </div>
+  </div>
+  <script src="./js/app.js"></script>
+</body>
+</html>
